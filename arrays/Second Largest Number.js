@@ -6,7 +6,7 @@ function secondLargest(arr) {
 	return sorted[1]
 }
 
-// Another soultion 
+// Another soultion to the same problem
 
 function secondLargest(arr) {
 	let [largest, second, ...rest] = arr.sort((a,b) => b - a)
