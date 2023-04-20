@@ -1,0 +1,5 @@
+
+button.active, button.stopActive {
+    cursor: not-allowed;
+    opacity: .8;
+}
