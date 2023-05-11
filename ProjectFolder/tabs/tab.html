@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabbed Content Example</title>
+    <style>
+        .tab-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab-button" onclick="changeTab(event, 'tab1')">Tab 1</button>
+        <button class="tab-button" onclick="changeTab(event, 'tab2')">Tab 2</button>
+        <button class="tab-button" onclick="changeTab(event, 'tab3')">Tab 3</button>
+        <button class="tab-button" onclick="changeTab(event, 'tab4')">Tab 4</button>
+        <button class="tab-button" onclick="changeTab(event, 'tab5')">Tab 5</button>
+        <button class="tab-button" onclick="changeTab(event, 'tab6')">Tab 6</button>
+        <button class="tab-button" onclick="changeTab(event, 'tab7')">Tab 7</button>
+        <button class="tab-button" onclick="changeTab(event, 'tab8')">Tab 8</button>
+        <button class="tab-button" onclick="changeTab(event, 'tab9')">Tab 9</button>
+    </div>
+    
+    <div id="tab1" class="tab-content">
+        <h2>Hello World</h2>
+    </div>
+    
+    <div id="tab2" class="tab-content">
+        <h2>Hi There</h2>
+    </div>
+    
+    <div id="tab3" class="tab-content">
+        <h2>Another Page Here</h2>
+    </div>
+
+    <div id="tab4" class="tab-content">
+        <h2>Yay! Tab Four is here!</h2>
+    </div>
+
+    <div id="tab5" class="tab-content">
+        <h2>tab 5</h2>
+    </div>
+    
+    <div id="tab6" class="tab-content">
+        <h2>Six</h2>
+    </div>
+    
+    <div id="tab7" class="tab-content">
+        <h2>Seven</h2>
+    </div>
+
+    <div id="tab8" class="tab-content">
+        <h2>Eight!</h2>
+    </div>
+
+    <div id="tab9" class="tab-content">
+        <h2>Nine!</h2>
+    </div>
+    
+    <script>
+        function changeTab(event, tabId) {
+            // Hide all tab contents
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = "none";
+            }
+            
+            // Show the selected tab content
+            document.getElementById(tabId).style.display = "block";
+        }
+    </script>
+</body>
+</html>
