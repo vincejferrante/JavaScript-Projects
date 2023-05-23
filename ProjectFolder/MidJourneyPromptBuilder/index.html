@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Mid-Journey Prompt Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+        <h1>MindMuse AI</h1>
+        </header>
+        <div class="container">
+            <div class="mainwrapper">
+                <main class="main">
+                    <p class="results" id="values">/imagine prompt:</p> 
+                    <button id="resultsBtn" class="reset">Reset</button>
+                    <button id="resultsBtn" class="copy">Copy</button>
+                </main>
+            </div>
+            <aside class="sidebar">
+                
+                    <button class="tab-button" onclick="changeTab(event, 'tab1')">Text</button>
+                    <button class="tab-button" onclick="changeTab(event, 'tab2')">Filters</button>
+                    <button class="tab-button" onclick="changeTab(event, 'tab3')">Parameters </button>
+                
+                
+    
+                <div id="tab1" class="tab-content">
+                    <h2>Text</h2>
+                    <input type="text" class="userInput">
+                </div>
+    
+                <div id="tab2" class="tab-content">
+                    <h2>Filters</h2>
+                    <input type="search" class="searchFeature"> <br>
+                    <label>Selected <span>0</span></label>
+                    <button id="filterbtn" class="layouts">Designs</button>
+                    <button id="filterbtn"  class="textures">Textures</button>
+                    <button id="filterbtn"  class="colors">Colors</button>
+                    <button id="filterbtn"  class="artists">Artists</button>
+                    <button id="filterbtn"  class="camera">Camera</button>
+                    <button id="filterbtn"  class="lighting">Lighting</button>
+                    <button id="filterbtn"  class="objects">Objects</button>
+                    <button id="filterbtn"  class="techniques">Techniques</button>
+                    <button id="filterbtn"  class="themes">Themes</button>
+                    <button id="filterbtn"  class="styles">Styles</button>
+                    <button id="filterbtn"  class="movies">Movies</button>
+                    <button id="filterbtn"  class="architecture">Architecture</button>
+                    <button id="filterbtn"  class="fashion">Outfits/Fashion</button>
+                    <button id="filterbtn"  class="emojis">Emojis</button>
+                    <button id="filterbtn"  class="palettes">Palettes</button>
+                    <button id="filterbtn"  class="characters">Characters</button>
+                    <button id="filterbtn"  class="background">Background</button>
+                    <div class="itemresults"></div>
+                </div>
+    
+                <div id="tab3" class="tab-content">
+                    <h2>Parameters</h2>
+
+                    <ul>
+                        <li>Aspect Ratio:
+                            <select class="handleSelectionChange">
+                                <option></option>
+                                <option value="4:5">4:5</option>
+                                <option value="2:3">2:3</option>
+                                <option value="4:7">4:7</option>
+                                <option value="5:4">5:4</option>
+                                <option value="3:2">3:2</option>
+                                <option value="7:4">7:4</option>
+                            </select>
+                            <button class="pushButton">Push</button>
+                        </li>
+                        <li>Chaos:
+                            <input type="number" min="0" max="100" class="handleSelectionChange">
+                            <button class="pushButton">Push</button>
+                        </li>
+                        <li>Quality:
+                            <select class="handleSelectionChange">
+                                <option></option>
+                                <option value=".25">.25</option>
+                                <option value=".5">.5</option>
+                                <option value="1">1</option>
+                            </select>
+                            <button class="pushButton">Push</button>
+                        </li>
+                        <li>Seed:
+                            <input type="number" min="0" max="4294967295" class="handleSelectionChange">
+                            <button class="pushButton">Push</button>
+                        </li>
+                        <li>Stop:
+                            <input type="number" min="10" max="100" class="handleSelectionChange">
+                            <button class="pushButton">Push</button>
+                        </li>
+                        <li>Style:
+                            <select class="handleSelectionChange">
+                                <option></option>
+                                <option value="4a">4a</option>
+                                <option value="4b">4b</option>
+                                <option value="4c">4c</option>
+                            </select>
+                            <button class="pushButton">Push</button>
+                        </li>
+                        <li>Stylize:
+                            <input type="number" min="0" max="1000" class="handleSelectionChange">
+                            <button class="pushButton">Push</button>
+                        </li>
+                        <br>
+    
+                        
+                    </ul>
+                    
+    
+                    
+
+                   
+                    
+                </div>
+            </aside>
+        </div>
+       </body>
+
+
+    
+       <script src="js/mains.js" type="module"></script>
+       <script src="js/arrays.js" type="module"></script>
+       <script src="js/tabs.js" ></script>
+       <script src="js/parameters.js" ></script>
+       
+ 
+</body>
+</html>
